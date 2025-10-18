@@ -4,6 +4,8 @@ import { useQuery } from "@tanstack/react-query";
 import { getUpcomingMovies } from "../api/tmdb-api";
 import Spinner from "../components/spinner";
 import AddToFavoritesIcon from "../components/cardIcons/addToFavorites";
+import AddToWatchListIcon from "../components/cardIcons/addToWatchList";
+
 
 const UpcomingMoviesPage = () => {
   // Fetch upcoming movies using react-query
@@ -27,7 +29,7 @@ const UpcomingMoviesPage = () => {
       title="Upcoming Movies"
       movies={movies}
       action={(movie) => {
-        return <AddToFavoritesIcon movie={movie} />;
+        return <AddToWatchListIcon movie={movie} />;
       }}
     />
   );
