@@ -21,7 +21,7 @@ const root = {
 };
 const chip = { margin: 0.5 };
 
-const MovieDetails = ({ movie }) => {  // Don't miss this!
+const MovieDetails = ({ movie }) => {  
 const [drawerOpen, setDrawerOpen] = useState(false);
 
   return (
@@ -58,6 +58,7 @@ const [drawerOpen, setDrawerOpen] = useState(false);
           label={`${movie.vote_average} (${movie.vote_count})`}
         />
         <Chip label={`Released: ${movie.release_date}`} />
+        <Chip label={`Original Language: ${movie.original_language}`} />
       </Paper>
       <Paper component="ul" sx={{ ...root }}>
           <li>
